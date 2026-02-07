@@ -34,7 +34,7 @@ public class AplliedVacancyController {
 		Vacancy vacancy=aplliedVacancyDaoImpl.getVacancy(vId);
 		Recruiter recruiter=aplliedVacancyDaoImpl.getRecruiter(vacancy.getEmail());
 		
-		AppliedVacancy appliedVacancy=new AppliedVacancy(vacancy, candidate, recruiter, null);
+		AppliedVacancy appliedVacancy=new AppliedVacancy(vacancy, candidate, recruiter, "Pending");
 		if(aplliedVacancyDaoImpl.saveAplliedVacancy(appliedVacancy))
 		{  	return "redirect:/seeAllVacancies";
         } else {
