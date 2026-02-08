@@ -17,13 +17,12 @@
     <mvc:resources mapping="/css/**" location="/css/" />
     <mvc:resources mapping="/js/**" location="/js/" />
    
-    <bean class="org.apache.commons.dbcp.BasicDataSource" name="ds">
+  <bean class="org.apache.commons.dbcp2.BasicDataSource" name="ds">
     <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
     
     <property name="url" value="jdbc:mysql://mysql.railway.internal:3306/railway?createDatabaseIfNotExist=true&amp;autoReconnect=true&amp;useSSL=false&amp;allowPublicKeyRetrieval=true"/>
     
     <property name="username" value="root"/>
-    
     <property name="password" value="csWPvkRQxSJKlmtCTNaxLeKCnOqQjGnI"/>
 </bean>
    
