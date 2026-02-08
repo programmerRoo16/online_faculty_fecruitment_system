@@ -206,7 +206,100 @@
 
         .no-data { padding: 40px; text-align: center; color: var(--secondary-color); font-style: italic; }
         .message-box { background-color: #ecfdf5; color: var(--success); padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #a7f3d0; font-size: 14px; }
+        
+       /* --- RESPONSIVE MEDIA QUERIES --- */
 
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack sidebar on top of content */
+        overflow-y: auto;
+    }
+
+    /* Adjust Sidebar for Mobile */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin-bottom: 0;
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .section-label {
+        display: none; /* Hide labels like "Account" to save space */
+    }
+
+    /* Adjust Main Content */
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .top-bar {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr; /* Single column for stats */
+    }
+
+    /* Table Responsiveness */
+    .table-container {
+        overflow-x: auto; /* Enable horizontal scrolling for wide tables */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 800px; /* Ensures table doesn't squish too much */
+    }
+
+    .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links a span {
+        display: none; /* Optional: hide text, show icons only if space is tight */
+    }
+    
+    .user-welcome h2 {
+        font-size: 20px;
+    }
+    
+    .card .number {
+        font-size: 22px;
+    }
+}
     </style>
 </head>
 <body>
